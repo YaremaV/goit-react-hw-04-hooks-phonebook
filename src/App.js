@@ -8,9 +8,8 @@ import Layout from './components/Layout/Layout';
 
 export default function App() {
   const [contacts, setContacts] = useState(
-    initialContacts,
-    // () =>
-    //   JSON.parse(window.localStorage.getItem('contacts')) ?? initialContacts,
+    () =>
+      JSON.parse(window.localStorage.getItem('contacts')) ?? initialContacts,
   );
   const [filter, setFilter] = useState('');
 
